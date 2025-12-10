@@ -15,6 +15,10 @@ run/main_scene="uid://cvb5dhkfcqceq"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+DialogueManager="*res://Dialogue/DialogueManager.gd"
+
 [input]
 
 ui_accept={

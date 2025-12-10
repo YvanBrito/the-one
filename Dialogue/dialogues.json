@@ -1,0 +1,30 @@
+{
+  "intro": [
+	{
+	  "speaker": "Narrador",
+	  "text": "Bem-vindo ao nosso jogo! Aperte Espaço para avançar."
+	},
+	{
+	  "speaker": "Maria",
+	  "text": "Você está pronto para começar a aventura?",
+	  "portrait": "res://Dialogue/maria.jpg"
+	},
+	{
+	  "speaker": "Maria",
+	  "text": "O que você quer fazer agora?",
+	  "portrait": "res://Dialogue/maria.jpg",
+	  "choices": [
+		{ "text": "Explorar a vila", "next": "vila_explorar" },
+		{ "text": "Ficar e conversar", "next": "vila_conversar" }
+	  ]
+	}
+  ],
+
+  "vila_explorar": [
+	{ "speaker": "Narrador", "text": "Você segue para a vila e encontra um mercado animado." }
+  ],
+
+  "vila_conversar": [
+	{ "speaker": "Narrador", "text": "Você fica e conversa. Maria conta histórias da região." }
+  ]
+}
