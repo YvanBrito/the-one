@@ -1,6 +1,6 @@
 # Exemplo de script para instanciar a DialogueBox e iniciar diálogo
 # Anexe este script ao nó root da sua cena principal (ex: res://Main.tscn)
-extends Node2D
+extends CanvasLayer
 
 func _ready() -> void:
 	# instanciar a UI de diálogo (expecting res://DialogueBox.tscn)

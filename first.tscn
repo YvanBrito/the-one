@@ -1,6 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://cvb5dhkfcqceq"]
+[gd_scene load_steps=20 format=3 uid="uid://cvb5dhkfcqceq"]
 
-[ext_resource type="Script" uid="uid://cox78gkt5sc18" path="res://player.gd" id="1_6v8b3"]
+[ext_resource type="Script" uid="uid://cox78gkt5sc18" path="res://Player.gd" id="1_6v8b3"]
+[ext_resource type="Script" uid="uid://bow6ocuorx2aa" path="res://Interactable.gd" id="1_yuy7h"]
 [ext_resource type="Texture2D" uid="uid://cqdaet58m87fx" path="res://slash.png" id="2_kbo0x"]
 [ext_resource type="Script" uid="uid://dl20nw82yflgy" path="res://camera_2d.gd" id="3_yukdk"]
 [ext_resource type="AudioStream" uid="uid://qqcmnnwmsjsn" path="res://c-pad.mp3" id="4_gj4ai"]
@@ -13,13 +14,10 @@ size = Vector2(8344, 63.277496)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gj4ai"]
 size = Vector2(4233, 406.39935)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kbo0x"]
-size = Vector2(194.5, 6.5490437)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_gj4ai"]
-radius = 63.516125
-
 [sub_resource type="SphereMesh" id="SphereMesh_yuy7h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yuy7h"]
+size = Vector2(254, 204)
 
 [sub_resource type="Animation" id="Animation_7lyux"]
 length = 0.001
@@ -58,6 +56,9 @@ _data = {
 &"RESET": SubResource("Animation_7lyux"),
 &"levitate": SubResource("Animation_6cqou")
 }
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kbo0x"]
+size = Vector2(194.5, 6.5490437)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yukdk"]
 size = Vector2(61, 124)
@@ -259,36 +260,27 @@ mesh = SubResource("QuadMesh_6v8b3")
 position = Vector2(-8.5, 0)
 shape = SubResource("RectangleShape2D_gj4ai")
 
-[node name="Altar" type="StaticBody2D" parent="."]
-position = Vector2(4962, 580)
-scale = Vector2(1, 16.720005)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Altar"]
-position = Vector2(0, 6.2051353)
-shape = SubResource("RectangleShape2D_kbo0x")
-disabled = true
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Altar"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
 modulate = Color(0.43519226, 0.4351923, 0.43519217, 1)
-position = Vector2(1.2797767, 6.3542566)
-scale = Vector2(243.43967, 6.2491875)
+position = Vector2(4963.28, 686.2432)
+scale = Vector2(243.43967, 104.48644)
 mesh = SubResource("QuadMesh_6v8b3")
 
-[node name="Angel" type="StaticBody2D" parent="."]
+[node name="Area2D" type="Area2D" parent="."]
 position = Vector2(4962, 538)
+script = ExtResource("1_yuy7h")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Angel"]
-position = Vector2(0, 6.2051353)
-shape = SubResource("CircleShape2D_gj4ai")
-disabled = true
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Angel"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Area2D"]
 modulate = Color(0.3840916, 0.6729015, 0.46378833, 1)
-position = Vector2(1.2797767, 6.3542566)
+position = Vector2(1.2797852, 6.354248)
 scale = Vector2(123.56, 123.56)
 mesh = SubResource("SphereMesh_yuy7h")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Angel"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(2, 92)
+shape = SubResource("RectangleShape2D_yuy7h")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Area2D"]
 libraries = {
 &"": SubResource("AnimationLibrary_qlnvb")
 }
@@ -334,7 +326,7 @@ scale = Vector2(192.99986, 17.4932)
 mesh = SubResource("QuadMesh_6v8b3")
 
 [node name="Player" type="CharacterBody2D" parent="."]
-position = Vector2(659, 341)
+position = Vector2(623, 624)
 script = ExtResource("1_6v8b3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
@@ -413,7 +405,7 @@ scale = Vector2(520.301, 471.6676)
 mesh = SubResource("QuadMesh_6v8b3")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(659, 341)
+position = Vector2(667, 509)
 zoom = Vector2(0.48, 0.48)
 script = ExtResource("3_yukdk")
 target_path = NodePath("../Player")
@@ -425,3 +417,8 @@ current = true
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Camera2D"]
 stream = ExtResource("4_gj4ai")
 autoplay = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

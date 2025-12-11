@@ -20,8 +20,10 @@
 	}
   ],
 
-  "vila_explorar": [
-	{ "speaker": "Narrador", "text": "Você segue para a vila e encontra um mercado animado." }
+  "find_angel": [
+	{ "speaker": "Angel", "text": "Olá! Você deve estar um pouco confuso agora, não é?" },
+	{ "speaker": "Angel", "text": "Devem ter muitas perguntas na sua cabeça eu entendo" },
+	{ "speaker": "Angel", "text": "Não se preocupe, tudo será esclarecido aos poucos" }
   ],
 
   "vila_conversar": [
