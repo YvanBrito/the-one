@@ -11,13 +11,17 @@ config_version=5
 [application]
 
 config/name="The One"
-run/main_scene="uid://cvb5dhkfcqceq"
+run/main_scene="uid://dm0l1thq3x2q1"
 config/features=PackedStringArray("4.5", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://Assets/img/icon.svg"
 
 [autoload]
 
-DialogueManager="*res://Dialogue/DialogueManager.gd"
+DialogueManager="*res://DialogueSystem/DialogueManager.gd"
+
+[global_group]
+
+Enemy=""
 
 [input]
 
@@ -73,6 +77,12 @@ interact={
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":10,"pressure":0.0,"pressed":true,"script":null)
 ]
 }
+
+[layer_names]
+
+2d_physics/layer_1="Player"
+2d_physics/layer_2="Enemy"
+2d_physics/layer_3="Ground"
 
 [rendering]
 

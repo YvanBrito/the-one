@@ -1,0 +1,210 @@
+[gd_scene load_steps=8 format=3 uid="uid://dm0l1thq3x2q1"]
+
+[ext_resource type="PackedScene" uid="uid://ckmbguy7ad5sf" path="res://prefabs/player.tscn" id="1_ofxyk"]
+[ext_resource type="PackedScene" uid="uid://dkfl2fqjv6i5k" path="res://prefabs/enemy.tscn" id="2_qe6vs"]
+[ext_resource type="Script" uid="uid://dl20nw82yflgy" path="res://scripts/camera_2d.gd" id="4_nd2g7"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_ofxyk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6v8b3"]
+size = Vector2(8344, 63.277496)
+
+[sub_resource type="QuadMesh" id="QuadMesh_6v8b3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gj4ai"]
+size = Vector2(4233, 406.39935)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.5, 0.5)
+
+[node name="MeshInstance2D7" type="MeshInstance2D" parent="Parallax2D"]
+modulate = Color(1, 1, 1, 0.6)
+position = Vector2(1867, -108)
+scale = Vector2(115.62274, 111.47141)
+mesh = SubResource("QuadMesh_ofxyk")
+
+[node name="MeshInstance2D6" type="MeshInstance2D" parent="Parallax2D"]
+modulate = Color(1, 1, 1, 0.6)
+position = Vector2(2254, 359)
+scale = Vector2(115.62274, 111.47141)
+mesh = SubResource("QuadMesh_ofxyk")
+
+[node name="MeshInstance2D5" type="MeshInstance2D" parent="Parallax2D"]
+modulate = Color(1, 1, 1, 0.6)
+position = Vector2(2512.0002, 21)
+scale = Vector2(115.62274, 111.47141)
+mesh = SubResource("QuadMesh_ofxyk")
+
+[node name="MeshInstance2D4" type="MeshInstance2D" parent="Parallax2D"]
+modulate = Color(1, 1, 1, 0.6)
+position = Vector2(1521, 180)
+scale = Vector2(115.62274, 111.47141)
+mesh = SubResource("QuadMesh_ofxyk")
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="Parallax2D"]
+modulate = Color(1, 1, 1, 0.6)
+position = Vector2(3393, -120)
+scale = Vector2(115.62274, 111.47141)
+mesh = SubResource("QuadMesh_ofxyk")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="Parallax2D"]
+modulate = Color(1, 1, 1, 0.6)
+position = Vector2(2820.0002, -298)
+scale = Vector2(115.62274, 111.47141)
+mesh = SubResource("QuadMesh_ofxyk")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Parallax2D"]
+modulate = Color(1, 1, 1, 0.6)
+position = Vector2(3216, 279)
+scale = Vector2(115.62274, 111.47141)
+mesh = SubResource("QuadMesh_ofxyk")
+
+[node name="MeshInstance2D8" type="MeshInstance2D" parent="Parallax2D"]
+modulate = Color(1, 1, 1, 0.6)
+position = Vector2(4423.8115, -95.26428)
+scale = Vector2(115.62274, 111.47141)
+mesh = SubResource("QuadMesh_ofxyk")
+
+[node name="MeshInstance2D9" type="MeshInstance2D" parent="Parallax2D"]
+modulate = Color(1, 1, 1, 0.6)
+position = Vector2(4810.8115, 371.73572)
+scale = Vector2(115.62274, 111.47141)
+mesh = SubResource("QuadMesh_ofxyk")
+
+[node name="MeshInstance2D10" type="MeshInstance2D" parent="Parallax2D"]
+modulate = Color(1, 1, 1, 0.6)
+position = Vector2(5068.8115, 33.735718)
+scale = Vector2(115.62274, 111.47141)
+mesh = SubResource("QuadMesh_ofxyk")
+
+[node name="MeshInstance2D11" type="MeshInstance2D" parent="Parallax2D"]
+modulate = Color(1, 1, 1, 0.6)
+position = Vector2(4077.8113, 192.73572)
+scale = Vector2(115.62274, 111.47141)
+mesh = SubResource("QuadMesh_ofxyk")
+
+[node name="MeshInstance2D12" type="MeshInstance2D" parent="Parallax2D"]
+modulate = Color(1, 1, 1, 0.6)
+position = Vector2(5949.8115, -107.26428)
+scale = Vector2(115.62274, 111.47141)
+mesh = SubResource("QuadMesh_ofxyk")
+
+[node name="MeshInstance2D13" type="MeshInstance2D" parent="Parallax2D"]
+modulate = Color(1, 1, 1, 0.6)
+position = Vector2(5376.8115, -285.26428)
+scale = Vector2(115.62274, 111.47141)
+mesh = SubResource("QuadMesh_ofxyk")
+
+[node name="MeshInstance2D14" type="MeshInstance2D" parent="Parallax2D"]
+modulate = Color(1, 1, 1, 0.6)
+position = Vector2(5775.8115, 291.73572)
+scale = Vector2(115.62274, 111.47141)
+mesh = SubResource("QuadMesh_ofxyk")
+
+[node name="MeshInstance2D15" type="MeshInstance2D" parent="Parallax2D"]
+modulate = Color(1, 1, 1, 0.6)
+position = Vector2(6746.8115, -204.26428)
+scale = Vector2(115.62274, 111.47141)
+mesh = SubResource("QuadMesh_ofxyk")
+
+[node name="MeshInstance2D16" type="MeshInstance2D" parent="Parallax2D"]
+modulate = Color(1, 1, 1, 0.6)
+position = Vector2(7133.8115, 262.73572)
+scale = Vector2(115.62274, 111.47141)
+mesh = SubResource("QuadMesh_ofxyk")
+
+[node name="MeshInstance2D17" type="MeshInstance2D" parent="Parallax2D"]
+modulate = Color(1, 1, 1, 0.6)
+position = Vector2(7391.8115, -75.26428)
+scale = Vector2(115.62274, 111.47141)
+mesh = SubResource("QuadMesh_ofxyk")
+
+[node name="MeshInstance2D18" type="MeshInstance2D" parent="Parallax2D"]
+modulate = Color(1, 1, 1, 0.6)
+position = Vector2(6400.8115, 83.73572)
+scale = Vector2(115.62274, 111.47141)
+mesh = SubResource("QuadMesh_ofxyk")
+
+[node name="MeshInstance2D19" type="MeshInstance2D" parent="Parallax2D"]
+modulate = Color(1, 1, 1, 0.6)
+position = Vector2(8272.812, -216.26428)
+scale = Vector2(115.62274, 111.47141)
+mesh = SubResource("QuadMesh_ofxyk")
+
+[node name="MeshInstance2D20" type="MeshInstance2D" parent="Parallax2D"]
+modulate = Color(1, 1, 1, 0.6)
+position = Vector2(7699.8115, -394.26428)
+scale = Vector2(115.62274, 111.47141)
+mesh = SubResource("QuadMesh_ofxyk")
+
+[node name="MeshInstance2D21" type="MeshInstance2D" parent="Parallax2D"]
+modulate = Color(1, 1, 1, 0.6)
+position = Vector2(8098.8115, 182.73572)
+scale = Vector2(115.62274, 111.47141)
+mesh = SubResource("QuadMesh_ofxyk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(4280, 1712)
+scale = Vector2(1, 16.720005)
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -26.734444)
+shape = SubResource("RectangleShape2D_6v8b3")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D"]
+modulate = Color(0.43529412, 0.43529412, 0.43529412, 1)
+scale = Vector2(8345.88, 116.62512)
+mesh = SubResource("QuadMesh_6v8b3")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(-2021, -704)
+scale = Vector2(1, 16.720005)
+collision_layer = 3
+collision_mask = 3
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D3"]
+modulate = Color(0.43529412, 0.43529412, 0.43529412, 1)
+scale = Vector2(4257.94, 404.78375)
+mesh = SubResource("QuadMesh_6v8b3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(16, 0)
+shape = SubResource("RectangleShape2D_gj4ai")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2(10527, -704)
+scale = Vector2(1, 16.720005)
+collision_layer = 3
+collision_mask = 3
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D4"]
+modulate = Color(0.43529412, 0.43529412, 0.43529412, 1)
+scale = Vector2(4257.94, 404.78375)
+mesh = SubResource("QuadMesh_6v8b3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2(-8.5, 0)
+shape = SubResource("RectangleShape2D_gj4ai")
+
+[node name="Player" parent="." instance=ExtResource("1_ofxyk")]
+position = Vector2(437, 605)
+
+[node name="Enemy" parent="." instance=ExtResource("2_qe6vs")]
+position = Vector2(950, 646)
+scale = Vector2(3.5199976, 3.5199976)
+
+[node name="Enemy2" parent="." instance=ExtResource("2_qe6vs")]
+position = Vector2(1170, 543)
+scale = Vector2(3.5199976, 3.5199976)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(667, 509)
+zoom = Vector2(0.48, 0.48)
+script = ExtResource("4_nd2g7")
+target_path = NodePath("../Player")
+lookahead_distance = 150.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]

@@ -22,7 +22,7 @@
 
   "find_angel": [
 	{ "speaker": "Angel", "text": "Olá! Você deve estar um pouco confuso agora, não é?" },
-	{ "speaker": "Angel", "text": "Devem ter muitas perguntas na sua cabeça eu entendo" },
+	{ "speaker": "Angel", "text": "Devem ter muitas perguntas na sua cabeça, eu entendo" },
 	{ "speaker": "Angel", "text": "Não se preocupe, tudo será esclarecido aos poucos" }
   ],
 

@@ -1,14 +1,15 @@
 [gd_scene load_steps=2 format=3 uid="uid://cy3vbkc50j4m6"]
 
-[ext_resource type="Script" uid="uid://bcb6mbimhq4kf" path="res://Dialogue/DialogueBox.gd" id="1"]
+[ext_resource type="Script" uid="uid://bcb6mbimhq4kf" path="res://DialogueSystem/DialogueBox.gd" id="1"]
 
 [node name="DialogueBox" type="Control"]
 visible = false
 layout_mode = 3
+anchor_top = 1.001
 anchor_right = 1.0
-anchor_bottom = 0.35
-offset_top = 422.0
-offset_bottom = 422.0
+anchor_bottom = 1.001
+offset_top = -226.64801
+offset_bottom = 0.15197754
 script = ExtResource("1")
 
 [node name="Panel" type="Panel" parent="."]
@@ -34,17 +35,22 @@ expand_mode = 1
 
 [node name="VBox" type="VBoxContainer" parent="."]
 z_index = 1
-layout_mode = 0
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 offset_left = 195.0
-offset_top = 19.0
-offset_right = 918.0
-offset_bottom = 196.0
+offset_top = -207.79999
+offset_right = -234.0
+offset_bottom = -30.799988
+grow_horizontal = 2
+grow_vertical = 0
 
 [node name="SpeakerLabel" type="Label" parent="VBox"]
 layout_mode = 2
 
 [node name="Text" type="RichTextLabel" parent="VBox"]
-modulate = Color(1, 1, 0.45882353, 1)
 custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
 bbcode_enabled = true

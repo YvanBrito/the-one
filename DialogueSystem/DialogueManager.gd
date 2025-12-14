@@ -14,11 +14,11 @@ var current_dialogue_id: String = ""
 var _queue: Array = []
 var _waiting_for_choice: bool = false
 var _last_line: Dictionary = {}
-var dialog_box := ResourceLoader.load("res://Dialogue/DialogueBox.tscn")
+var dialog_box := ResourceLoader.load("res://DialogueSystem/DialogueBox.tscn")
 var dlg: Control = null
 
 # Arquivo padrão de diálogos (pode chamar load_from_file para outro path)
-const DEFAULT_DIALOGUE_PATH: String = "res://Dialogue/dialogues.json"
+const DEFAULT_DIALOGUE_PATH: String = "res://DialogueSystem/dialogues.json"
 
 func _ready() -> void:
 	dlg = dialog_box.instantiate()
@@ -28,19 +28,16 @@ func _ready() -> void:
 func _find_canvas():
 	var main = get_tree().get_current_scene()
 	if not main:
-		print("Cena principal não encontrada ainda")
 		return
 
 	var canvas = main.get_node_or_null("CanvasLayer")
 	if canvas:
-		print("CanvasLayer encontrado:", canvas)
 		canvas.add_child(dlg)
 		return
 
 	canvas = main.find_node("CanvasLayer", true, false)
 	if canvas:
 		canvas.add_child(dlg)
-		print("CanvasLayer encontrado com find_node:", canvas)
 	else:
 		print("CanvasLayer não encontrado na cena principal")
 

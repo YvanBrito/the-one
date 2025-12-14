@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=3 uid="uid://dkfl2fqjv6i5k"]
+
+[ext_resource type="Script" uid="uid://cqpynir34itp5" path="res://scripts/Enemy.gd" id="1_6n8dw"]
+[ext_resource type="Script" uid="uid://d2vfvm1qtoxmv" path="res://scripts/HurtBox.gd" id="2_yfjof"]
+[ext_resource type="Script" uid="uid://bfv2hom1mof6a" path="res://scripts/HitBox.gd" id="3_cypye"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ks3ws"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_6n8dw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cypye"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a7d0n"]
+size = Vector2(24, 24)
+
+[node name="Enemy" type="CharacterBody2D" groups=["Enemy"]]
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("1_6n8dw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ks3ws")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+modulate = Color(1, 0.43481064, 0.3661391, 1)
+scale = Vector2(20, 20)
+mesh = SubResource("QuadMesh_6n8dw")
+
+[node name="HurtBox" type="Area2D" parent="."]
+script = ExtResource("2_yfjof")
+metadata/_custom_type_script = "uid://d2vfvm1qtoxmv"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+shape = SubResource("RectangleShape2D_cypye")
+
+[node name="HitBox" type="Area2D" parent="."]
+script = ExtResource("3_cypye")
+metadata/_custom_type_script = "uid://bfv2hom1mof6a"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+shape = SubResource("RectangleShape2D_a7d0n")
